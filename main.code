@@ -1,0 +1,109 @@
+```json
+{
+  "request": {
+    "htmlContent": "<html>\n\t<head>\n\t\t<title>Example HTML Landing Page</title>\n\t</head>\n\t<body>\n\t\t<h1>Welcome to Our Website</h1>\n\t\t<p>This is our landing page. Please look around and learn more about us.</p>\n\t</body>\n</html>",
+    "buttons": [
+      {
+        "text": "Learn More",
+        "link": "https://example.com/about"
+      },
+      {
+        "text": "Contact Us",
+        "link": "https://example.com/contact"
+      }
+    ]
+  },
+  "response": {
+    "landingPageHtml": "<html>\n\t<head>\n\t\t<title>Example HTML Landing Page</title>\n\t</head>\n\t<body>\n\t\t<h1>Welcome to Our Website</h1>\n\t\t<p>This is our landing page. Please look around and learn more about us.</p>\n\t\t<a href=\"https://example.com/about\">Learn More</a><a href=\"https://example.com/contact\">Contact Us</a>\n\t</body>\n</html>"
+  }
+}
+```
+
+**File Structure:**
+
+```
+.
+├── index.html
+├── scripts.js
+└── styles.css
+```
+
+**index.html:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example HTML Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <h1>Welcome to Our Website</h1>
+  <p>This is our landing page. Please look around and learn more about us.</p>
+  <a href="#">Learn More</a>
+  <a href="#">Contact Us</a>
+</body>
+</html>
+```
+
+**scripts.js:**
+
+```javascript
+// Example JavaScript code for your landing page
+
+// Get the buttons
+const buttons = document.querySelectorAll('a');
+
+// Add event listeners to the buttons
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function() {
+    // Get the href attribute of the button
+    const href = this.getAttribute('href');
+
+    // Redirect the user to the href
+    window.location.href = href;
+  });
+}
+```
+
+**styles.css:**
+
+```css
+/* Example CSS styles for your landing page */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #f00;
+}
+```
+
+**Implementation Details:**
+
+1. Create an HTML file and include the necessary head and body tags.
+2. Add your landing page content within the body tags.
+3. Include any necessary CSS and JavaScript files in the head tag.
+4. Add event listeners to any buttons or links on the landing page.
+5. Save the HTML file and open it in a web browser to view the landing page.
+
+**Documentation:**
+
+* [HTML Landing Page Documentation](https://developers.google.com/web/fundamentals/landing-page)
+* [CSS Landing Page Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript Landing Page Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
